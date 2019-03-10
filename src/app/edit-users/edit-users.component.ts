@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 
 @Component({
@@ -6,7 +6,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   templateUrl: './edit-users.component.html',
   styleUrls: ['./edit-users.component.css']
 })
-export class EditUsersComponent implements OnInit {
+export class EditUsersComponent {
   //setting value to a empty string
   value:string = '';
 
@@ -16,8 +16,6 @@ export class EditUsersComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
 
   //function for removing a user and sending it to our dashboard with @Output()
   removeUser() {

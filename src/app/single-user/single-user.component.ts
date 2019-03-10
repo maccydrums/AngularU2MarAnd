@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -6,17 +6,16 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './single-user.component.html',
   styleUrls: ['./single-user.component.css']
 })
-export class SingleUserComponent implements OnInit {
+
+//shows which username the user has clicked
+export class SingleUserComponent {
 
   user:string;
 
-  //vi tar emot parametrar genom att subscriba på params
+  //receiving parameters by subscribing to params
   constructor(private route: ActivatedRoute) {
     this.route.params.subscribe(params => {
       this.user = params.id;
     })
   }
-  ngOnInit() {
-  }
-
 }

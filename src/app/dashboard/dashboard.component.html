@@ -1,3 +1,4 @@
+<!--- ngIf isn't necessary, since I've got my routeGuard --->
 <div class ="container" *ngIf="loggedUser;">
   <!-- Selectors with @Input/Output() to be able to send & receive data  -->
   <app-user-list [user]="users"></app-user-list>

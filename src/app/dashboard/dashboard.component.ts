@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { AuthService } from '../auth-service.service';
 
 @Component({
@@ -6,17 +6,16 @@ import { AuthService } from '../auth-service.service';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
-export class DashboardComponent implements OnInit {
+
+export class DashboardComponent {
 
   //The array with our users
   users: string[] = ['Knatte', 'Fnatte', 'Tjatte'];
   loggedUser: string;
 
+  // gets the value of loggedUser in authService
   constructor(private authService: AuthService) {
     this.loggedUser = this.authService.checkIfLoggedIn();
-  }
-
-  ngOnInit() {
   }
 
   //adding a new user to our array with parameters/data from edit-users (@Output() newName = new EventEmitter<string>();)
